@@ -8,8 +8,8 @@ import javax.persistence.*;
 import java.util.List;
 
 //Maps to the table named locations in DB
-//@Entity(name = "locations")
-//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@Entity(name = "locations")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,18 +21,11 @@ public class Location {
     private int access_rating;
 
 
-    private List<Location>locations;
 
     public Location(){
     }
 
-    public List<Location> getLocations() {
-        return locations;
-    }
 
-    public void setLocations(List<Location> locations) {
-        this.locations = locations;
-    }
 
     public Long getLocation_id() {
         return location_id;
